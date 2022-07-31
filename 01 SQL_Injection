@@ -43,7 +43,7 @@ result = cursor.fetchall()
 
 
 
-#fragile to SQK Injection
+#fragile to SQL Injection
 cursor.execute("SELECT admin FROM users WHERE username='"+username+"'")
 cursor.execute("SELECT admin FROM users WHERE username='%s'"%username)
 cursor.execute("SELECT admin FROM users WHERE username='{}'".format(username))
